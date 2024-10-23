@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.MenuItem
 import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson
 import com.jesando.zphererent.R
+import com.jesando.zphererent.activity.defaultActivity.admin.AdminDashboardActivity
 import com.jesando.zphererent.activity.defaultActivity.customer.CustomerHomeActivity
 import com.jesando.zphererent.activity.mainActivity.MainActivity
 import com.jesando.zphererent.config.NetworkConfig
@@ -25,6 +27,8 @@ public class DashboardActivity : AppCompatActivity(){
     private  lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         binding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -50,6 +54,11 @@ public class DashboardActivity : AppCompatActivity(){
         binding.cardCustomer.setOnClickListener {
             // Pindah ke CustomerActivity
             val intent = Intent(this, CustomerHomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardAdmin.setOnClickListener {
+            val intent = Intent(this, AdminDashboardActivity::class.java)
             startActivity(intent)
         }
 

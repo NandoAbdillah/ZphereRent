@@ -1,12 +1,13 @@
-package com.jesando.zphererent
+package com.jesando.zphererent.activity.defaultActivity.customer.car
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.jesando.zphererent.R
 
-class activity_customer_car_detail : AppCompatActivity() {
+class CustomerCarDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

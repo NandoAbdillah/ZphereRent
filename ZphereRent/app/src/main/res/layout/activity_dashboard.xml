@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.defaultActivity.DashboardActivity"
+    >
 
     <TextView
         android:id="@+id/username"
@@ -50,134 +52,105 @@
         app:srcCompat="@drawable/golf" />
 
     <!-- Card Admin -->
-    <Button
+    <LinearLayout
         android:id="@+id/card_admin"
-        android:layout_width="315dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="45dp"
         android:layout_height="107dp"
         android:layout_marginTop="55dp"
         android:background="@drawable/button_shape2"
         android:elevation="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/car_image" />
+        app:layout_constraintTop_toBottomOf="@id/car_image"
+        android:orientation="horizontal"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="20dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/admin_alt"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
 
-    <!-- Title Card Admin -->
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masuk sebagai admin"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                />
+        </LinearLayout>
 
-    <!-- Icon Card Admin -->
 
-    <TextView
-        android:id="@+id/title_card_admin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:elevation="2dp"
-        android:text="Admin"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@id/card_admin"
-        android:fontFamily="@font/poppinssemibold"
-        app:layout_constraintTop_toTopOf="@id/card_admin" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/title_card_admin2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="56dp"
-        android:elevation="2dp"
-        android:fontFamily="@font/poppinsregular"
-        android:text="Logged in as admin"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/card_admin"
-        app:layout_constraintTop_toTopOf="@id/card_admin" />
-
-    <Button
-        android:id="@+id/card_admin_icon"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/icon_shape"
-        android:elevation="3dp"
-        app:layout_constraintStart_toStartOf="@id/card_admin"
-        app:layout_constraintTop_toTopOf="@id/card_admin" />
-
-    <ImageView
-        android:id="@+id/icon_admin"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="26dp"
-        android:elevation="3dp"
-        app:layout_constraintStart_toStartOf="@id/card_admin"
-        app:layout_constraintTop_toTopOf="@id/card_admin"
-        app:srcCompat="@drawable/admin_alt" />
 
     <!-- Card Customer -->
-    <Button
+    <LinearLayout
         android:id="@+id/card_customer"
-        android:layout_width="315dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="45dp"
         android:layout_height="107dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/button_shape2"
         android:elevation="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_admin" />
+        app:layout_constraintTop_toBottomOf="@id/card_admin"
+        android:orientation="horizontal"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="20dp"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/customer_care"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
 
-    <!-- Title Card Admin -->
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masuk untuk customer baru"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                />
+        </LinearLayout>
 
-    <!-- Icon Card Admin -->
 
-    <TextView
-        android:id="@+id/title_card_customer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:elevation="2dp"
-        android:text="Customer"
-        android:fontFamily="@font/poppinssemibold"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@id/card_customer"
-        app:layout_constraintTop_toTopOf="@id/card_customer" />
-
-    <TextView
-        android:id="@+id/title_card_customer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="56dp"
-        android:elevation="2dp"
-        android:fontFamily="@font/poppinsregular"
-        android:text="Create new customer"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/card_customer"
-        app:layout_constraintTop_toTopOf="@id/card_customer" />
-
-    <Button
-        android:id="@+id/card_customer_icon"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/icon_shape"
-        android:elevation="3dp"
-        app:layout_constraintStart_toStartOf="@id/card_customer"
-        app:layout_constraintTop_toTopOf="@id/card_customer" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="26dp"
-        android:elevation="3dp"
-        app:layout_constraintStart_toStartOf="@id/card_customer"
-        app:layout_constraintTop_toTopOf="@id/card_customer"
-        app:srcCompat="@drawable/customer_care" />
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"

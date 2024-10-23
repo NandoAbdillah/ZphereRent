@@ -16,10 +16,19 @@
         android:theme="@style/Theme.ZphereRent"
         tools:targetApi="31">
         <activity
+            android:name=".activity.defaultActivity.admin.car.CarManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.defaultActivity.admin.car.AddNewCarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.defaultActivity.admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.guestActivity.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_customer_car_detail"
+            android:name=".activity.defaultActivity.customer.car.CustomerCarDetail"
             android:exported="false" />
         <activity
             android:name=".activity.guestActivity.LoginActivity"
