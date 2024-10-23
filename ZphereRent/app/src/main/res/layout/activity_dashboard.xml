@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Hai, User"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-8dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Selamat Datang"
+        android:textColor="#45000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="71dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_2" />
+
+    <ImageView
+        android:id="@+id/car_image"
+        android:layout_width="335dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greetings"
+        app:srcCompat="@drawable/golf" />
+
+    <!-- Card Admin -->
+    <Button
+        android:id="@+id/card_admin"
+        android:layout_width="315dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/button_shape2"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/car_image" />
+
+    <!-- Title Card Admin -->
+
+    <!-- Icon Card Admin -->
+
+    <TextView
+        android:id="@+id/title_card_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp"
+        android:text="Admin"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/card_admin"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toTopOf="@id/card_admin" />
+
+    <TextView
+        android:id="@+id/title_card_admin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="56dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Logged in as admin"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/card_admin"
+        app:layout_constraintTop_toTopOf="@id/card_admin" />
+
+    <Button
+        android:id="@+id/card_admin_icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/icon_shape"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="@id/card_admin"
+        app:layout_constraintTop_toTopOf="@id/card_admin" />
+
+    <ImageView
+        android:id="@+id/icon_admin"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="@id/card_admin"
+        app:layout_constraintTop_toTopOf="@id/card_admin"
+        app:srcCompat="@drawable/admin_alt" />
+
+    <!-- Card Customer -->
+    <Button
+        android:id="@+id/card_customer"
+        android:layout_width="315dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_shape2"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_admin" />
+
+    <!-- Title Card Admin -->
+
+    <!-- Icon Card Admin -->
+
+    <TextView
+        android:id="@+id/title_card_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp"
+        android:text="Customer"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/card_customer"
+        app:layout_constraintTop_toTopOf="@id/card_customer" />
+
+    <TextView
+        android:id="@+id/title_card_customer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="56dp"
+        android:elevation="2dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Create new customer"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/card_customer"
+        app:layout_constraintTop_toTopOf="@id/card_customer" />
+
+    <Button
+        android:id="@+id/card_customer_icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/icon_shape"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="@id/card_customer"
+        app:layout_constraintTop_toTopOf="@id/card_customer" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="@id/card_customer"
+        app:layout_constraintTop_toTopOf="@id/card_customer"
+        app:srcCompat="@drawable/customer_care" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="username,greetings,profile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
