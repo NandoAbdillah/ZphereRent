@@ -3,14 +3,10 @@ package com.jesando.zphererent.activity.guestActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.jesando.zphererent.R
 import com.jesando.zphererent.config.NetworkConfig
 import com.jesando.zphererent.databinding.ActivityRegisterBinding
-import com.jesando.zphererent.model.RegisterResponse
+import com.jesando.zphererent.model.response.auth.RegisterResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

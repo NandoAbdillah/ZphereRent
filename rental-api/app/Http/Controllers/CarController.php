@@ -25,7 +25,7 @@ class CarController extends Controller
             'license_plate' => 'required|string|unique:cars',
             'price_per_day' => 'required|numeric|min:0',
             'available' => 'boolean',
-            'image' => 'nullable|string',
+            'image' => 'nullable|file|image|mimes:jpeg,png,jpg,gif|max:2048',
             'fuel_type' => 'required|in:petrol,diesel,electric,hybrid',
             'transmission' => 'required|in:manual,automatic',
             'mileage' => 'integer|min:0',
@@ -46,8 +46,35 @@ class CarController extends Controller
             ], 400);
         }
 
-        // Buat data baru
-        $car = Car::create($request->all());
+        // Simpan gambar jika ada
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            // Simpan file dan dapatkan path yang benar
+            $imagePath = $request->file('image')->store('cars', 'public');
+        }
+
+        // Buat data baru secara manual
+        $car = new Car();
+        $car->brand = $request->input('brand');
+        $car->model = $request->input('model');
+        $car->year = $request->input('year');
+        $car->color = $request->input('color');
+        $car->seats = $request->input('seats');
+        $car->category_id = $request->input('category_id');
+        $car->license_plate = $request->input('license_plate');
+        $car->price_per_day = $request->input('price_per_day');
+        $car->available = $request->input('available', false);
+        $car->image = $imagePath; // Path gambar
+        $car->fuel_type = $request->input('fuel_type');
+        $car->transmission = $request->input('transmission');
+        $car->mileage = $request->input('mileage', 0);
+        $car->last_service_date = $request->input('last_service_date');
+        $car->condition_notes = $request->input('condition_notes');
+        $car->vin = $request->input('vin');
+        $car->in_maintenance = $request->input('in_maintenance', false);
+        $car->insured = $request->input('insured', false);
+        $car->description = $request->input('description');
+        $car->save();
 
         return response()->json([
             'error' => false,
@@ -56,6 +83,7 @@ class CarController extends Controller
             'car' => $car,
         ], 201);
     }
+
 
     // Get all cars
     public function index()

@@ -2,18 +2,13 @@ package com.jesando.zphererent.activity.guestActivity
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.gson.Gson
-import com.jesando.zphererent.R
 import com.jesando.zphererent.activity.defaultActivity.DashboardActivity
 import com.jesando.zphererent.config.NetworkConfig
 import com.jesando.zphererent.databinding.ActivityLoginBinding
-import com.jesando.zphererent.model.LoginResponse
+import com.jesando.zphererent.model.response.auth.LoginResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

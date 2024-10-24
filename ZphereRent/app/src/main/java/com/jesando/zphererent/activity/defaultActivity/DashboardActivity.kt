@@ -15,7 +15,7 @@ import com.jesando.zphererent.activity.defaultActivity.admin.AdminDashboardActiv
 import com.jesando.zphererent.activity.defaultActivity.customer.CustomerHomeActivity
 import com.jesando.zphererent.activity.mainActivity.MainActivity
 import com.jesando.zphererent.config.NetworkConfig
-import com.jesando.zphererent.model.User
+import com.jesando.zphererent.model.response.auth.User
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

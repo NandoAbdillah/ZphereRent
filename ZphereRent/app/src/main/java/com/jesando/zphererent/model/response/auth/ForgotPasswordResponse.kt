@@ -1,6 +1,6 @@
-package com.jesando.zphererent.model
+package com.jesando.zphererent.model.response.auth
 
-data class ResetPasswordResponse(
+data class ForgotPasswordResponse(
     val error: Boolean,
     val success: Int,
     val message: String,

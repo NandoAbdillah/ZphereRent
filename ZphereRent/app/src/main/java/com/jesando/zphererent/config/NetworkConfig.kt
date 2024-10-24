@@ -9,8 +9,10 @@ import java.util.concurrent.TimeUnit
 class NetworkConfig {
 
     //    val BASE_URL:String = "http://10.0.2.2:8000/api/"
-//    val BASE_URL:String = "http://192.168.100.13:8000/api/"
-    val BASE_URL:String = "http://192.168.100.13:8000/api/"
+    //    val BASE_URL:String = "http://192.168.100.13:8000/api/"
+    //    val BASE_URL:String = "http://192.168.100.13:8000/api/"  YTTA
+    val BASE_URL:String = "http://192.168.1.27:8000/api/"
+
 
     private fun setOkhttp(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor().setLevel(

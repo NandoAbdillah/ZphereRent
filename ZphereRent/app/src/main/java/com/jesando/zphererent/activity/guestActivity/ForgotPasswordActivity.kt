@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.jesando.zphererent.R
 import com.jesando.zphererent.config.NetworkConfig
 import com.jesando.zphererent.databinding.ActivityForgotPasswordBinding
-import com.jesando.zphererent.model.ForgotPasswordResponse
-import com.jesando.zphererent.model.VerifyTokenResponse
-import com.jesando.zphererent.model.ResetPasswordResponse
+import com.jesando.zphererent.model.response.auth.ForgotPasswordResponse
+import com.jesando.zphererent.model.response.auth.VerifyTokenResponse
+import com.jesando.zphererent.model.response.auth.ResetPasswordResponse
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

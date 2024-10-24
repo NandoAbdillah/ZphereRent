@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CarCategoryResource;
 use App\Models\CarCategory;
 use App\Http\Requests\StoreCarCategoryRequest;
 use App\Http\Requests\UpdateCarCategoryRequest;
@@ -15,7 +16,7 @@ class CarCategoryController extends Controller
     public function index()
     {
         $categories = CarCategory::all();
-        return response()->json($categories);
+        return new CarCategoryResource(true, 'Cart Category List', $categories);
     }
 
     /**

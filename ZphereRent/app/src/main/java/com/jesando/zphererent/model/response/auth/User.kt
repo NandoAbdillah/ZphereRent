@@ -1,4 +1,4 @@
-package com.jesando.zphererent.model
+package com.jesando.zphererent.model.response.auth
 
 
 data class User(
