@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.defaultActivity.DashboardActivity"
+    android:padding="16dp"
     >
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/poppinsbold"
         android:text="Hai, User"
         android:textSize="24sp"
@@ -35,7 +36,7 @@
         android:id="@+id/profile"
         android:layout_width="71dp"
         android:layout_height="63dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -55,9 +56,9 @@
     <LinearLayout
         android:id="@+id/card_admin"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="45dp"
+        android:layout_marginHorizontal="29dp"
         android:layout_height="107dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/button_shape2"
         android:elevation="1dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +107,7 @@
     <LinearLayout
         android:id="@+id/card_customer"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="45dp"
+        android:layout_marginHorizontal="29dp"
         android:layout_height="107dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_shape2"

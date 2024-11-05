@@ -19,17 +19,6 @@ class CarCategoryController extends Controller
         return new CarCategoryResource(true, 'Cart Category List', $categories);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    // public function create(Request $request)
-    // {
-
-    // }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreCarCategoryRequest $request)
     {
         $request->validate([
@@ -41,6 +30,8 @@ class CarCategoryController extends Controller
         ]);
 
         return response()->json([
+            'error' => false,
+            'success' => 1,
             'message' => 'Car category created successfully',
             'category' => $category,
         ], 201);
@@ -61,17 +52,7 @@ class CarCategoryController extends Controller
         return response()->json($category);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    // public function edit(CarCategory $carCategory)
-    // {
-    //     //
-    // }
-
-    /**
-     * Update the specified resource in storage.
-     */
+   
     public function update(Request $request, $id)
     {
         $category = CarCategory::find($id);
@@ -94,9 +75,7 @@ class CarCategoryController extends Controller
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy($id)
     {
         $category = CarCategory::find($id);

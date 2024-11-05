@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Warna latar utama dengan efek transparansi untuk glass effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gradientStartColor"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+
+    <!-- Highlight layer untuk menambah efek kedalaman -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gradientEndColor"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+
+
+</layer-list>

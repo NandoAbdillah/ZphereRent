@@ -12,10 +12,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.ZphereRent"
         tools:targetApi="31">
+        <activity
+            android:name=".activity.defaultActivity.admin.car.AddNewFeaturesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.defaultActivity.admin.car.AddNewCategoriesActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.defaultActivity.admin.car.CarManagementActivity"
             android:exported="false" />

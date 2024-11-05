@@ -1,225 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.defaultActivity.admin.AdminDashboardActivity"
-    android:padding="16dp"
-    >
+    android:background="#F0F4F8"
 
+    tools:context=".activity.defaultActivity.admin.AdminDashboardActivity">
 
-        <!-- Metrics Summary Section -->
-        <TextView
-            android:id="@+id/tv_dashboard_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dashboard"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="45dp"
+        android:orientation="vertical"
 
+        >
         <LinearLayout
-            android:id="@+id/layout_metrics"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/tv_dashboard_title"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"
-            android:weightSum="3">
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:id="@+id/navigate_back">
 
-            <!-- Total Cars Available -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_total_cars"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="50"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cars Available"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-            <!-- Current Rentals -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_current_rentals"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="20"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Current Rentals"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-            <!-- Pending Bookings -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_pending_bookings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pending Bookings"
-                    android:gravity="center"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Revenue Summary -->
-        <LinearLayout
-            android:id="@+id/layout_revenue_summary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/layout_metrics"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/baseline_back"
+                app:tint="@color/white"
+                android:padding="10dp"
+                android:background="@drawable/button_shape_circle"
+                />
 
             <TextView
-                android:id="@+id/tv_revenue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Today's Revenue: $2,500"
-                android:textSize="18sp"/>
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="375dp"
-            android:layout_height="483dp"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="154dp">
-
-            <LinearLayout
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="ADMIN DASHBOARD"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:fontFamily="@font/poppinsextra"
+                />
+        </LinearLayout>
 
+
+
+        <FrameLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+            <LinearLayout
+                android:id="@+id/ly_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_round_1"
+                android:paddingVertical="35dp"
+                android:paddingHorizontal="15dp"
+                >
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="158dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/card_grey"
+                    android:layout_marginHorizontal="8dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="User Management" />
-                    </LinearLayout>
+                        android:layout_height="60dp"
+                        android:textAlignment="center"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textSize="50sp"
+                        android:textColor="#CCFFFFFF"
+                        />
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Mobil Tersedia"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="11sp"
+                        android:textColor="@color/white" />
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="158dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <LinearLayout
-                        android:id="@+id/card_car_management"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/card_grey"
+                    android:layout_marginHorizontal="8dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1">
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Car Management" />
-                    </LinearLayout>
+                        android:layout_height="60dp"
+                        android:textAlignment="center"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textSize="50sp"
+                        android:textColor="#CCFFFFFF"
+                        />
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Rental Terkini"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="11sp"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/card_grey"
+                    android:layout_marginHorizontal="8dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="158dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <LinearLayout
+                    >
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Booking Management"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </LinearLayout>
+                        android:layout_height="60dp"
+                        android:textAlignment="center"
+                        android:text="0"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textSize="50sp"
+                        android:textColor="#CCFFFFFF"
+                        />
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Total Transaksi"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:textSize="11sp"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
             </LinearLayout>
-        </ScrollView>
+
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="170dp"
+               android:background="@drawable/layout_round_2">
+               <LinearLayout
+                   android:id="@+id/ly_2"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:paddingVertical="45dp"
+                   android:paddingHorizontal="50dp"
+                   android:orientation="vertical">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:orientation="horizontal">
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/card_black"
+                           android:layout_marginEnd="15dp"
+                           android:layout_weight="1"
+                           android:orientation="vertical"
+                           android:padding="15dp"
+                           >
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="60dp"
+                               android:src="@drawable/ic_car"
+                               app:tint="@color/white"
+                               />
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginBottom="8dp"
+                               android:text="Mobil"
+                               android:textAlignment="center"
+                               android:fontFamily="@font/poppinssemibold"
+                               android:textColor="@color/white"
+                               />
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               >
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:padding="5dp"
+                                   android:src="@drawable/ic_edit"
+                                   app:tint="@color/white"
+                                   />
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:id="@+id/tmbh_mobil"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:src="@drawable/ic_add"
+                                   app:tint="@color/white"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/card_black"
+                           android:layout_weight="1"
+                           android:orientation="vertical"
+                           android:padding="15dp" >
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="60dp"
+                               android:src="@drawable/ic_category"
+                               app:tint="@color/white"
+                               />
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginBottom="8dp"
+                               android:text="Kategori"
+                               android:textAlignment="center"
+                               android:fontFamily="@font/poppinssemibold"
+                               android:textColor="@color/white"
+                               />
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               >
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:padding="5dp"
+                                   android:src="@drawable/ic_edit"
+                                   app:tint="@color/white"
+                                   />
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:id="@+id/tmbh_kategori"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:src="@drawable/ic_add"
+                                   app:tint="@color/white"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/card_black"
+                           android:layout_marginEnd="10dp"
+                           android:layout_weight="1"
+                           android:orientation="vertical"
+                           android:padding="15dp"
+                           >
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="60dp"
+                               android:src="@drawable/ic_mileage"
+                               app:tint="@color/white"
+                               />
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginBottom="8dp"
+                               android:text="Fitur"
+                               android:textAlignment="center"
+                               android:fontFamily="@font/poppinssemibold"
+                               android:textColor="@color/white"
+                               />
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               >
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:padding="5dp"
+                                   android:src="@drawable/ic_edit"
+                                   app:tint="@color/white"
+                                   />
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:id="@+id/tmbh_fitur"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:src="@drawable/ic_add"
+                                   app:tint="@color/white"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/card_black"
+                           android:layout_weight="1"
+                           android:orientation="vertical"
+                           android:padding="15dp" >
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="60dp"
+                               android:src="@drawable/ic_user"
+                               app:tint="@color/white"
+                               />
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginBottom="8dp"
+                               android:text="Pelanggan"
+                               android:textAlignment="center"
+                               android:fontFamily="@font/poppinssemibold"
+                               android:textColor="@color/white"
+                               />
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                               >
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:padding="5dp"
+                                   android:src="@drawable/ic_edit"
+                                   app:tint="@color/white"
+                                   />
+                               <ImageView
+                                   android:layout_width="0dp"
+                                   android:id="@+id/tmbh_pelanggan"
+                                   android:layout_weight="1"
+                                   android:layout_height="30dp"
+                                   android:src="@drawable/ic_add"
+                                   app:tint="@color/white"
+                                   />
+                           </LinearLayout>
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+           </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

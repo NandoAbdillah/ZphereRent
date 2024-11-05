@@ -1,10 +1,14 @@
 package com.jesando.zphererent.activity.defaultActivity;
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import com.jesando.zphererent.databinding.ActivityDashboardBinding;
 import android.os.Bundle;
+import android.os.Handler
+import android.os.Looper
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -25,6 +29,18 @@ import retrofit2.Response
 public class DashboardActivity : AppCompatActivity(){
 
     private  lateinit var binding: ActivityDashboardBinding
+    private lateinit var carImageView : ImageView
+    private val carImageList = listOf(
+        R.drawable.hyundai,
+        R.drawable.toyota,
+        R.drawable.suzuki,
+        R.drawable.honda,
+        R.drawable.isuzu,
+        R.drawable.daihatsu,
+        R.drawable.mitsubishi
+    )
+
+    private var currentCarImageIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -66,7 +82,44 @@ public class DashboardActivity : AppCompatActivity(){
             showProfileMenu(it)
         }
 
+        // Memulai Animasi
+        carImageView = binding.carImage
+        startImagesSlideShow()
 
+
+    }
+
+    private fun startImagesSlideShow(){
+        val handler = Handler(Looper.getMainLooper())
+        val delay: Long = 2500
+
+        val runnable = object :  Runnable {
+            override fun run() {
+                fadeOutAndChangeImage()
+
+                handler.postDelayed(this, delay)
+            }
+
+        }
+
+        handler.post(runnable)
+    }
+
+    private fun fadeOutAndChangeImage(){
+        val fadeOut = ObjectAnimator.ofFloat(carImageView, "alpha", 1f, 0f)
+        fadeOut.duration = 500
+
+        fadeOut.addUpdateListener {
+            if (it.animatedFraction == 1f) {
+                currentCarImageIndex = (currentCarImageIndex + 1) % carImageList.size
+                carImageView.setImageResource(carImageList[currentCarImageIndex])
+
+                val fadeIn = ObjectAnimator.ofFloat(carImageView, "alpha", 0f, 1f)
+                fadeIn.duration = 500
+                fadeIn.start()
+            }
+        }
+        fadeOut.start()
     }
 
     private fun showProfileMenu(view: android.view.View) {

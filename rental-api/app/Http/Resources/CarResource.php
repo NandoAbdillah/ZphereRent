@@ -13,13 +13,16 @@ class CarResource extends JsonResource
      * @return array<string, mixed>
      */
     public $status;
+    public $error;
     public $message;
     public $resource;
 
-    public function __construct($status, $message, $resource)
+    public function __construct($error,$status, $message, $resource)
     {
         parent::__construct($resource);
 
+        
+        $this->error = $error;
         $this->message = $message;
         $this->status = $status;
 
@@ -29,6 +32,7 @@ class CarResource extends JsonResource
     public function toArray($request):array 
     {
         return[
+            'error' => $this->error,
             'success' => $this->status,
             'message' => $this->message,
             'data' => $this->resource,

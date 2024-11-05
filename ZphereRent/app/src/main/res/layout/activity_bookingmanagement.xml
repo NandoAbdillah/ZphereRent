@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_white_bg_2"
-    tools:context=".activity.guestActivity.BookingActivity">
+    android:background="@drawable/blue_white_bg_2">
 
     <!-- Title -->
     <TextView
@@ -26,7 +25,6 @@
         android:id="@+id/recycler_booking_list"
         android:layout_width="368dp"
         android:layout_height="539dp"
-        android:layout_above="@id/button_layout"
         android:layout_below="@id/tv_booking_management_title"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="4dp"

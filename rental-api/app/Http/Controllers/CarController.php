@@ -26,8 +26,8 @@ class CarController extends Controller
             'price_per_day' => 'required|numeric|min:0',
             'available' => 'boolean',
             'image' => 'nullable|file|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'fuel_type' => 'required|in:petrol,diesel,electric,hybrid',
-            'transmission' => 'required|in:manual,automatic',
+            'fuel_type' => 'required',
+            'transmission' => 'required',
             'mileage' => 'integer|min:0',
             'last_service_date' => 'nullable|date',
             'condition_notes' => 'nullable|string',
@@ -89,7 +89,7 @@ class CarController extends Controller
     public function index()
     {
         $cars = Car::all();
-        return response()->json($cars, 200);
+        return new CarResource(false, 1, "Cars List", $cars);
     }
 
     // Get single car by ID

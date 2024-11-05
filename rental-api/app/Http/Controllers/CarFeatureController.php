@@ -18,17 +18,6 @@ class CarFeatureController extends Controller
         return response()->json($features);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    // public function create(Request $request)
-    // {
-    //     //
-    // }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -42,6 +31,8 @@ class CarFeatureController extends Controller
         ]);
 
         return response()->json([
+            'error' => false,
+            'success' => 1,
             'message' => 'Car feature created successfully',
             'feature' => $feature,
         ], 201);

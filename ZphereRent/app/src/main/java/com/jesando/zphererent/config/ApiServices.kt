@@ -6,7 +6,11 @@ import com.jesando.zphererent.model.response.auth.RegisterResponse
 import com.jesando.zphererent.model.response.auth.ResetPasswordResponse
 import com.jesando.zphererent.model.response.auth.VerifyTokenResponse
 import com.jesando.zphererent.model.response.car.ResponseAddNewCar
+import com.jesando.zphererent.model.response.car.ResponseAddNewCarCategory
+import com.jesando.zphererent.model.response.car.ResponseAddNewCarFeature
+import com.jesando.zphererent.model.response.car.ResponseListCar
 import com.jesando.zphererent.model.response.car.ResponseListCarCategory
+import com.jesando.zphererent.model.response.car.ResponseListCarFeature
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -69,7 +73,13 @@ interface ApiServices {
     // Car Cateogory
 
     @GET("car-categories")
-    fun getCarCategories(): Call<ResponseListCarCategory>
+    fun getAllCarCategories(): Call<ResponseListCarCategory>
+
+    @FormUrlEncoded
+    @POST("car-categories")
+    fun postCarCategory(
+        @Field("name") name: String
+    ): Call<ResponseAddNewCarCategory>
 
     @Multipart
     @POST("cars")
@@ -88,4 +98,19 @@ interface ApiServices {
         @Part("description") description: RequestBody?,
         @Part image: MultipartBody.Part?
     ): Call<ResponseAddNewCar>
+
+    @GET("cars")
+    fun getAllCars(): Call<ResponseListCar>
+
+
+    //Cars Feature
+    @GET("car-features")
+    fun getAllCarFeatures(): Call<ResponseListCarFeature>
+
+    @FormUrlEncoded
+    @POST("car-features")
+    fun postCarFeature(
+        @Field("name") name: String,
+        @Field("description") description: String?
+    ): Call<ResponseAddNewCarFeature>
 }
